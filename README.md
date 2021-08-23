@@ -33,25 +33,23 @@ when there is fail in saving you can use this function:
 
 if you want to push info you should use this function:
 
-`$message = 'you have message'; 
-
-$alert->give_info($message);`
+```$message = 'you have message'; 
+$alert->give_info($message);```
 
 ![ScreenShot](https://raw.githubusercontent.com/turkdevlopers/inistachiPUB/main/imgs/is.png)
 
 if you want to push warning you should use this function:
 
-`$message = 'you have warning message'; 
-
-$alert->give_warning($message);`
+```$message = 'you have warning message'; 
+$alert->give_warning($message);```
 
 ![ScreenShot](https://raw.githubusercontent.com/turkdevlopers/inistachiPUB/main/imgs/ws.png)
 
 ### custom message
 for pushing your custom message you can use this function:
 
-`$message = 'this is message';
+```$message = 'this is message';
 
 $class = ''//wich class you want for exampel : success warning error info ...
 
-$alert->custom_message($message, $class);`
+$alert->custom_message($message, $class);```
