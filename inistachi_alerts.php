@@ -1,5 +1,5 @@
 <?php
-
+namespace inistachi_alert;
 class Alert
 {
     private $success = 'success';
