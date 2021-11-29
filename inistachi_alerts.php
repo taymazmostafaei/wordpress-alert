@@ -1,6 +1,5 @@
 <?php
-namespace inistachi_alert;
-class Alert
+class Alerts
 {
     private $success = 'success';
     private $warning = 'warning';
@@ -22,15 +21,21 @@ class Alert
     }
     public function secusses_save(): void
     {
-        $message = 'Information saved successfully';
+        $message = 'اطلاعات با موفقیت ذخیره شد';
         $class = $this->success;
         $MessageContent = $this->msgbody($class, $message);
         $this->show_message($MessageContent);
     }
     public function fail_save(): void
     {
-        $message = 'Oh, there was a problem storing information';
+        $message = 'اوه مشکلی در ذخیره اطلاعات به وجود آمد';
         $class = $this->error;
+        $MessageContent = $this->msgbody($class, $message);
+        $this->show_message($MessageContent);
+    }
+    public function give_secusses($message): void
+    {
+        $class = $this->success;
         $MessageContent = $this->msgbody($class, $message);
         $this->show_message($MessageContent);
     }
@@ -43,6 +48,12 @@ class Alert
     public function give_warning($message): void
     {
         $class = $this->warning;
+        $MessageContent = $this->msgbody($class, $message);
+        $this->show_message($MessageContent);
+    }
+    public function give_error($message): void
+    {
+        $class = $this->error;
         $MessageContent = $this->msgbody($class, $message);
         $this->show_message($MessageContent);
     }
